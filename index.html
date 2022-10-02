@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="shortcut icon" type="image" href="wetherimage.png" />
+    <title>Wether App</title>
+  </head>
+
+  <body>
+<div id="stateOfDay" class="stateOfDay"></div>
+<div class="clock">
+<span id="hours"></span> : <span id="minutes"></span>  <span id="pmOram"></span>
+</div>
+    <img id="bg-i" src="" />
+    <div class="parent">
+      <div class="container">
+        <div class="input">
+          <input id="input" type="text" placeholder="Write City Name" />
+          <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        </div>
+        <div class="warnning" id="warnning">Your City Not Founded...</div>
+        <div class="result" id="result">
+          <div class="image">
+            <img id="imgstate" src="" alt="" />
+          </div>
+          <div class="deag-and-celsius">
+              <div class="deg" id="deg"> </div>
+              <img id="celsius" src="img/icons/celsius.png" >
+          </div>
+          <div class="state" id="state"></div>
+          <div class="location" id="locandcity">
+            <i class="fa-solid fa-location-dot"></i><span id="city"></span>,
+            <span id="country"></span>
+          </div>
+        </div>
+        <div class="maxDeg-and-humidity" id="maxDegreeAndHumidity">
+            <div class="left">
+                <i class="fa-solid fa-temperature-high"></i>
+                <div class="text">
+                    <span id="max-deg"></span>
+              <img id="celsius2" src="img/icons/celsius.png" >
+                </div>
+            </div>
+            <div class="right">
+             <i class="fa-solid fa-droplet"></i>
+                <div class="text">
+                    <span id="humidity"></span>
+                    <span>Humidity</span>
+                </div>
+            </div>
+        </div>
+        <div class="line">Or</div>
+        <div class="get-your-location">
+          <button id="getLoction"><i class="fa-solid fa-location-dot"></i> Get Your Location</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

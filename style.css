@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+:root {
+  --font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#bg-i {
+  position: fixed;
+  top: -4%;
+  left: -4%;
+  width: 109%;
+  height: 109%;
+  z-index: -1;
+  filter: blur(7px);
+}
+
+
+.clock , .stateOfDay {
+  position: fixed;
+  top: 15px;
+  right: 55px;
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: aliceblue;
+  padding: 8px 25px;
+  font-family: var(--font);
+}
+
+.stateOfDay {
+  left: 55px;
+}
+
+@media (max-width:767px){
+.stateOfDay {
+  left: 0px;
+    
+}
+.clock{
+      right: 0px;
+}
+}
+
+.parent {
+  width: 100%;
+}
+.container {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .input {
+  width: 100%;
+  position: relative;
+}
+
+.container .input input , .container .warnning{
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  box-shadow: 1px 1px 135px aliceblue;
+  font-family: var(--font);
+  letter-spacing: 1.5px;
+}
+
+.container .input i{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+    opacity: 0;
+}
+.container .input i:hover{
+    color: skyblue;
+}
+
+.container .warnning{
+ box-shadow: unset;
+ font-weight: bold;
+  margin-top: 15px;
+  background-color: rgb(230, 132, 132);
+  display: none;
+}
+
+.container .result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.container .result .image {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.container .result .image #imgstate {
+  width: 150px;
+  padding: 15px;
+  display: none;
+}
+.deag-and-celsius{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 2.5px;
+
+}
+.deag-and-celsius img{
+    width: 40px ;
+    padding: 0; 
+    display: none;
+}
+.deg , .state {
+    display: grid;
+    place-items: center;
+    font-family: var(--font);
+    font-size: 28px;
+    color:#333;
+}
+.deg{
+    margin-top: 2px;
+}
+.state{
+}
+
+.container .line {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  font-family: var(--font);
+  color: #333;
+  position: relative;
+}
+
+.container .line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 45%;
+  height: 1.25px;
+  background-color: #333;
+  transform: translateY(-50%);
+}
+
+.container .line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 45%;
+  height: 1.25px;
+  background-color: #333;
+  transform: translateY(-50%);
+}
+.container .location {
+  padding: 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font);
+  font-size: 20px;
+  color: #333;
+}
+
+.maxDeg-and-humidity{
+    width: 100%;
+    position: relative;
+    font-family: var(--font);
+    color: #333;
+    border-top: rgba(51, 51, 51, 0.205) 1.25px solid;
+    font-size: 10.5px ;
+    display: none;
+}
+
+.maxDeg-and-humidity .left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 5px;
+}
+.maxDeg-and-humidity .right{
+     width: 50%;
+    border-left: rgba(51, 51, 51, 0.205) 1.25px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.maxDeg-and-humidity .text{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.maxDeg-and-humidity .left i{
+
+}
+
+.maxDeg-and-humidity .left #max-deg ,.maxDeg-and-humidity .left i{
+    margin-top: 2px;
+} 
+
+.maxDeg-and-humidity .left .text{
+    flex-direction: row;
+    gap: 1.2px;
+}
+
+
+.maxDeg-and-humidity i{
+    color: skyblue;
+    font-size: 18px;
+}
+
+#celsius2{
+ width: 15px ;
+    padding: 0; 
+}
+
+.container .get-your-location {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .get-your-location #getLoction {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  background-color: white;
+  font-family: var(--font);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  color: rgba(51, 51, 51, 0.699);
+  transition: 0.3s;
+}
+
+.container .get-your-location #getLoction:hover {
+  color: #333;
+  font-weight: bold;
+  background-color: aquamarine;
+}
