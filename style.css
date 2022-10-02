@@ -54,8 +54,8 @@ body {
 .parent {
   width: 100%;
 }
-.container {
-  width: 94%;
+.container{
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -68,7 +68,11 @@ body {
   overflow: hidden;
 }
 
-
+@media(max-width:900px){
+  .container{
+    width : 95%;
+  }
+}
 
 .container .input {
   width: 100%;
