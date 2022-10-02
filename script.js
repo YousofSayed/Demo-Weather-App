@@ -33,7 +33,7 @@ setInterval(() => {
     const date = new Date;
     const hours = (date.getHours());
     const minutes = (date.getMinutes())
-    if ( hours === 24 || hours <= 5) {
+    if (hours >= 18 || hours === 24 || hours <= 5) {
         bg_img.src = ImgsBodyFornight;
         stateOFDay.textContent = 'Good Night';
     }
