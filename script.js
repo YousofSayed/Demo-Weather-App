@@ -33,11 +33,11 @@ setInterval(() => {
     const date = new Date;
     const hours = (date.getHours());
     const minutes = (date.getMinutes())
-    if (hours >= 18 || hours === 24 || hours <= 5) {
+    if (hours >= 18 && hours === 24 && hours <= 5) {
         bg_img.src = ImgsBodyFornight;
         stateOFDay.textContent = 'Good Night';
     }
-     if (hours >= 5 && hours < 14)) {
+     if (hours >= 5 && hours < 14) {
         bg_img.src = ImgsBodyForMornning;
         stateOFDay.textContent = 'Good Mornning';
     }
