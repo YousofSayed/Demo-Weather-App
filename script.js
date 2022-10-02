@@ -49,7 +49,7 @@ setInterval(() => {
 
     clockHours.textContent = hours -12 ;
     if (+clockHours.textContent <= 0){
-        clockHours.textContent = hours + 12
+        clockHours.textContent = 12 - hours
     }
     clockMinutes.textContent = "0" + minutes;
     if (+clockMinutes.textContent >= 10){
