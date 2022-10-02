@@ -55,7 +55,7 @@ body {
   width: 100%;
 }
 .container {
-  width: 300px;
+  width: 94%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -67,6 +67,8 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+
 
 .container .input {
   width: 100%;
