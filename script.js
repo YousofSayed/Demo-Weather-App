@@ -37,11 +37,11 @@ setInterval(() => {
         bg_img.src = ImgsBodyFornight;
         stateOFDay.textContent = 'Good Night';
     }
-     if (hours >= 5) {
+     if (hours >= 5 && hours < 14)) {
         bg_img.src = ImgsBodyForMornning;
         stateOFDay.textContent = 'Good Mornning';
     }
-     if (hours >= 14) {
+     if (hours >= 14 && hours < 18) {
         bg_img.src = ImgsBodyForEvenning;
         stateOFDay.textContent = 'Good Evenning';
     }
